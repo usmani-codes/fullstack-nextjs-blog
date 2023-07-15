@@ -1,3 +1,39 @@
-.contact {
-  background-color: aquamarine;
+.container {
+}
+.main_title {
+  font-size: 100px;
+}
+.items {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+.item {
+  border: 5px solid gray;
+  border-radius: 5px;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  background-size: cover !important;
+}
+
+.item:nth-child(1) {
+  background: url('/illustration.png');
+}
+.item:nth-child(2) {
+  background: url('/websites.jpg');
+}
+.item:nth-child(3) {
+  background: url('/apps.jpg');
+}
+.title {
+  font-size: 40px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.title:hover {
+  color: var(--color-primary);
 }

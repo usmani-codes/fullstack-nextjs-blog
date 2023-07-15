@@ -2,6 +2,7 @@
   --max-width: 1100px;
   --border-radius: 12px;
   --border-test: 1px solid red;
+  --color-primary: #53c28b;
 }
 
 * {
