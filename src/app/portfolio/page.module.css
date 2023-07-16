@@ -34,6 +34,6 @@
   font-weight: bold;
   transition: 0.3s;
 }
-.title:hover {
+.item:hover .title {
   color: var(--color-primary);
 }
