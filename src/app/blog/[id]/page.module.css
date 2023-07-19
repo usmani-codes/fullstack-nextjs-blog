@@ -47,3 +47,6 @@
   object-fit: cover;
   object-position: 20%;
 }
+.desc {
+  color: #999;
+}

@@ -1,7 +1,21 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 
-const BlogPost = () => {
+const getData = async (id) => {
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+    cache: 'no-store',
+  })
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
+
+const BlogPost = async ({ params }) => {
+  const data = await getData(params.id)
+  console.log(data)
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -44,7 +58,7 @@ const BlogPost = () => {
           />
         </div>
       </div>
-      <p>
+      <p className={styles.desc}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellat
         eius voluptatum commodi temporibus. Repudiandae, eos cum dolore labore
         eum, placeat modi exercitationem voluptates maxime ducimus dolores nemo
